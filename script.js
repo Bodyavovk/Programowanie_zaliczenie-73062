@@ -14,10 +14,24 @@ form.addEventListener("submit", function(e) {
     const div = document.createElement("div");
     div.classList.add("item");
 
-    div.innerHTML = `
-        <span class="d">${newDate}</span>
-        <span class="t">${task.value}</span>
-    `;
+    const dateSpan = document.createElement("span");
+    dateSpan.classList.add("d");
+    dateSpan.textContent = newDate;
+
+    const textSpan = document.createElement("span");
+    textSpan.classList.add("t");
+    textSpan.textContent = task.value;
+
+    const btn = document.createElement("button");
+    btn.textContent = "X";
+
+    btn.onclick = function() {
+        div.remove();
+    };
+
+    div.appendChild(dateSpan);
+    div.appendChild(textSpan);
+    div.appendChild(btn);
 
     result.appendChild(div);
 
