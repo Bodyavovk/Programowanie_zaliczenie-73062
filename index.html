@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista zadań</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <div class="left">
+        <h3>Lista zadań</h3>
+
+        <a href="https://github.com/your-username/your-repo" target="_blank">
+            Link do repozytorium
+        </a>
+
+        <form id="form">
+            <input type="text" id="task" placeholder="Opis zadania" maxlength="128">
+            <input type="date" id="date">
+            <button type="submit">Zapisz</button>
+        </form>
+    </div>
+
+    <div class="right" id="result">
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+body {
+    font-family: Arial;
+    background: #eee;
+}
+
+.container {
+    display: flex;
+    gap: 20px;
+}
+
+.left {
+    width: 200px;
+    border: 1px solid #000;
+    padding: 10px;
+}
+
+.right {
+    flex: 1;
+    border: 1px solid #000;
+    min-height: 200px;
+    padding: 10px;
+}
