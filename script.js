@@ -8,7 +8,19 @@ form.addEventListener("submit", function(e) {
 
     if (task.value === "" || date.value === "") return;
 
-    result.innerHTML =
-        "Zadanie: " + task.value + "<br>" +
-        "Data: " + date.value;
+    const parts = date.value.split("-");
+    const newDate = parts[2] + "." + parts[1] + "." + parts[0];
+
+    const div = document.createElement("div");
+    div.classList.add("item");
+
+    div.innerHTML = `
+        <span class="d">${newDate}</span>
+        <span class="t">${task.value}</span>
+    `;
+
+    result.appendChild(div);
+
+    task.value = "";
+    date.value = "";
 });
